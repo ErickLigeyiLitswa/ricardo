@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f2f5;
+    }
+    .login-container {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #45a049;
+    }
+    .login-container p {
+      margin-top: 15px;
+    }
+  </style>
+  <script>
+    function handleLogin(event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Example login validation (replace with actual logic)
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Simple condition for demonstration (replace with server-side check)
+      if (username === "user" && password === "pass") {
+        // Redirect to success page
+        window.location.href = "https://ErickLigeyiLitswa.github.io/ricardo/success.htm";
+      } else {
+        // Redirect to error page
+        window.location.href = "https://ErickLigeyiLitswa.github.io/ricardo/error.htm";
+      }
+    }
+  </script>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form id="login-form" onsubmit="handleLogin(event)">
+    <input type="text" id="username" name="username" placeholder="Username" required>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+    <button type="submit">Log In</button>
+  </form>
+  <p>Don't have an account? <a href="/register">Sign up</a></p>
+</div>
+
+</body>
+</html>
